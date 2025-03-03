@@ -66,6 +66,10 @@ async function fetchImageFromGoogle(query) {
   }
 }
 
+app.get('/', (req, res) => {
+  res.send('Welcome to Chat Bot');
+});
+
 app.post("/chat", async (req, res) => {
   console.log(req.body);
   const userMessage = req.body.message.toLowerCase().trim();
